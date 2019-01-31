@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListCatComponent } from './components/list-cat/list-cat.component';
 
 const routes: Routes = [
-  { path: 'test', component: ListCatComponent }
+  { path: 'cat-list', component: ListCatComponent }
 ];
 
 @NgModule({
