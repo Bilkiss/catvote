@@ -11,7 +11,7 @@ export class VoteComponent implements OnInit {
 
   catListObj:any;
   catList:any = [];
-  currentVote = 0;
+  currentVote: number;
   currentDisplayCat1 = 0;
   currentDisplayCat2 = 1;
   votesArray: any = [];
@@ -23,6 +23,12 @@ export class VoteComponent implements OnInit {
 
   ngOnInit() {
 
+    let currentVoteStorage = localStorage.getItem("currentVoteIndex");
+    this.currentVote = (currentVoteStorage) ? parseInt(currentVoteStorage) : 0;
+    console.log("currentVote onINIT: ", this.currentVote);
+
+    this.currentDisplayCat1 = this.currentVote * 2;
+    this.currentDisplayCat2 = this.currentDisplayCat1 + 1;
     this.getListCat();
   }
 
@@ -53,6 +59,8 @@ export class VoteComponent implements OnInit {
       localStorage.setItem("votesArray", JSON.stringify(this.votesArray));
 
     this.currentVote += 1;
+    console.log("currentVote onclick: ", this.currentVote);
+    localStorage.setItem("currentVoteIndex", JSON.stringify(this.currentVote));
     this.currentDisplayCat1 = this.currentVote * 2;
     this.currentDisplayCat2 = this.currentDisplayCat1 + 1;
 
