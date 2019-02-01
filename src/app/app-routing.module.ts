@@ -7,9 +7,10 @@ import { VoteComponent } from './components/vote/vote.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
 
 const routes: Routes = [
-  { path: '', component: VoteComponent },
+  { path: 'vote', component: VoteComponent },
   { path: 'cat-list', component: ListCatComponent },
-  { path: 'favorites', component: FavoriteComponent }
+  { path: 'favorites', component: FavoriteComponent },
+  { path: '**', component: VoteComponent },
 ];
 
 @NgModule({

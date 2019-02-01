@@ -10,13 +10,19 @@
 
     <ul class="navbar-nav my-2 my-lg-0">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">Vote</a>
+        <a class="nav-link" [routerLink]="['/vote']" routerLinkActive="active">
+          <i class="fa fa-star"></i>  Vote
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/cat-list']" routerLinkActive="active">List des chats</a>
+        <a class="nav-link" [routerLink]="['/cat-list']" routerLinkActive="active">
+          <i class="fa fa-list fa-primary"></i> List des chats
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/favorites']" routerLinkActive="active">Mes favoris</a>
+        <a class="nav-link" [routerLink]="['/favorites']" routerLinkActive="active">
+          <i class="fa fa-heart fa-danger"></i>  Mes favoris
+        </a>
       </li>
     </ul>
 

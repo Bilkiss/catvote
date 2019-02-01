@@ -1,4 +1,11 @@
 <app-menu></app-menu>
-<p>
-  favorite works!
-</p>
+<div class="container pt-5">
+  <div class="card-columns mt-5">
+    <div class="card" *ngFor="let cat of catVotedList">
+      <img class="card-img-top" [src]="cat.url" alt="{{cat.id}}">
+      <div class="card-body">
+        <h6 class="card-title">Score: {{cat.score}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

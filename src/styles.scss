@@ -39,3 +39,14 @@
     }
   }
 }
+
+.nav-link{
+  &.active{
+    .fa-danger{
+      color: #dc3545 !important;
+    }
+    .fa-primary{
+      color: #007bff !important;
+    }
+  }
+}
