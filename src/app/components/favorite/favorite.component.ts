@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
 
 import { EndpointService } from '../../services/endpoint.service';
 
@@ -38,6 +39,13 @@ export class FavoriteComponent implements OnInit {
     }, error => {
       console.log("Error: ", error);
     })
+  }
+  public get cats(): IMasonryGalleryImage[] {
+    this.getListCat();
+    return this.catVotedList.map(m => <IMasonryGalleryImage>{
+      imageUrl: m.url,
+      alt: m.id
+    });
   }
 
 }

@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { MasonryGalleryModule } from 'ngx-masonry-gallery';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,7 +24,8 @@ import { MenuComponent } from './components/shared/menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MasonryGalleryModule
   ],
   providers: [EndpointService],
   bootstrap: [AppComponent]
