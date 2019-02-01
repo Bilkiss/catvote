@@ -2,7 +2,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "~bootstrap/scss/bootstrap-reboot.scss";
-//@import "~font-awesome/scss/font-awesome.scss";
+@import "assets/css/font-awesome.css";
 
 .main-content{
   .row{
@@ -23,4 +23,19 @@
 }
 .rounded-img{
   border-radius: 10%;
+}
+.box-click{
+  cursor: pointer;
+}
+.border{
+  &-grey{
+    border: .5px solid grey;
+  }
+}
+.no{
+  &-border{
+    &--bottom{
+      border-bottom: .5px solid transparent;
+    }
+  }
 }

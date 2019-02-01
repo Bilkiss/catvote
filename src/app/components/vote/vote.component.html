@@ -1,16 +1,30 @@
 <div class="main-content">
   <div class="row voting-content" *ngIf="catList.length > 0">
-    <div class="col-6 container-bg text-right pr-2">
+    <div class="col-6 container-bg container-bg--white text-right pr-2">
       <div class="row container-bg-forty">
-        <div class="col-6 offset-3">
-          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat1].url" alt="" (click)="clickVote(catList[currentDisplayCat1].id)">
+        <div class="col-6 offset-3 text-center box-click" (click)="clickVote(catList[currentDisplayCat1].id)">
+          <i class="fa fa-heart-o fa-3x text-danger pb-3"></i>
+          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat1].url" alt="">
         </div>
       </div>
     </div>
     <div class="col-6 container-bg container-bg--grey-light pl-2">
       <div class="row container-bg-forty">
-        <div class="col-6 offset-3">
-          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat2].url" alt="" (click)="clickVote(catList[currentDisplayCat2].id)">
+        <div class="col-6 offset-3 text-center box-click" (click)="clickVote(catList[currentDisplayCat2].id)">
+          <i class="fa fa-heart-o fa-3x text-danger pb-3"></i>
+          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat2].url" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row no-gutters menu-container">
+    <div class="col-4 offset-4 menu-content">
+      <div class="row border-grey no-border--bottom pt-2">
+        <div class="col-6">
+          <p><a class="text-dark" [routerLink]="['/cat-list']"><i class="fa fa-list"></i> List des chats</a></p>
+        </div>
+        <div class="col-6">
+          <p><a class="text-dark" [routerLink]="['/favorites']"><i class="fa fa-heart text-danger"></i> Mes favoris</a></p>
         </div>
       </div>
     </div>
