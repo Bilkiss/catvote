@@ -4,10 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ListCatComponent } from './components/list-cat/list-cat.component';
 import { VoteComponent } from './components/vote/vote.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 const routes: Routes = [
   { path: '', component: VoteComponent },
-  { path: 'cat-list', component: ListCatComponent }
+  { path: 'cat-list', component: ListCatComponent },
+  { path: 'favorites', component: FavoriteComponent }
 ];
 
 @NgModule({

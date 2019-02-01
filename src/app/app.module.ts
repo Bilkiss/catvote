@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { EndpointService } from './services/endpoint.service';
 import { ListCatComponent } from './components/list-cat/list-cat.component';
 import { VoteComponent } from './components/vote/vote.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListCatComponent,
-    VoteComponent
+    VoteComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

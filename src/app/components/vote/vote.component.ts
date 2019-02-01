@@ -14,8 +14,12 @@ export class VoteComponent implements OnInit {
   currentVote = 0;
   currentDisplayCat1 = 0;
   currentDisplayCat2 = 1;
+  votesArray: any = [];
 
-  constructor(private endpointService: EndpointService) { }
+  constructor(private endpointService: EndpointService) {
+    this.votesArray = localStorage.getItem("votesArray");
+    if (!this.votesArray) localStorage.setItem("votesArray","[]");
+  }
 
   ngOnInit() {
 
@@ -41,6 +45,12 @@ export class VoteComponent implements OnInit {
     }, error =>{
       console.log("Error cat vote ", error);
     });
+
+    this.votesArray = localStorage.getItem("votesArray");
+    console.log("votesArray click vote: ", this.votesArray);
+    this.votesArray = (this.votesArray) ? JSON.parse(this.votesArray) : [];
+    if (!this.votesArray.includes(ID)) this.votesArray.push(ID);
+      localStorage.setItem("votesArray", JSON.stringify(this.votesArray));
 
     this.currentVote += 1;
     this.currentDisplayCat1 = this.currentVote * 2;
