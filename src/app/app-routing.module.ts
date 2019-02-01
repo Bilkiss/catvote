@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ListCatComponent } from './components/list-cat/list-cat.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 const routes: Routes = [
+  { path: '', component: VoteComponent },
   { path: 'cat-list', component: ListCatComponent }
 ];
 

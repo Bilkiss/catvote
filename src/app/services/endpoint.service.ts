@@ -19,4 +19,8 @@ export class EndpointService {
     return this.http.get(this.catsUrl + "cats");
   }
 
+  voteCat(catID){
+    return this.http.post(this.catsUrl + "cats/" + catID, '');
+  }
+
 }

@@ -1,0 +1,19 @@
+<div class="main-content">
+  <div class="row voting-content" *ngIf="catList.length > 0">
+    <div class="col-6 container-bg text-right pr-2">
+      <div class="row container-bg-forty">
+        <div class="col-6 offset-3">
+          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat1].url" alt="" (click)="clickVote(catList[currentDisplayCat1].id)">
+        </div>
+      </div>
+    </div>
+    <div class="col-6 container-bg container-bg--grey-light pl-2">
+      <div class="row container-bg-forty">
+        <div class="col-6 offset-3">
+          <img class="img-fluid rounded-img" [src]="catList[currentDisplayCat2].url" alt="" (click)="clickVote(catList[currentDisplayCat2].id)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { EndpointService } from './services/endpoint.service';
 import { ListCatComponent } from './components/list-cat/list-cat.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListCatComponent
+    ListCatComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule,
